@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dream Travel — Advanced</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,system-ui}
+body{background:linear-gradient(120deg,#eef2ff,#f8fafc);color:#0f172a}
+header{position:sticky;top:0;background:rgba(255,255,255,.75);backdrop-filter:blur(12px);padding:14px 28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0}
+nav a{margin:0 12px;text-decoration:none;color:#0f172a;font-weight:600}
+section{max-width:1150px;margin:auto;padding:60px 20px}
+h2{font-size:32px;margin-bottom:25px}
+.hero{position:relative;height:420px;border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.15)}
+.hero img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:1s}
+.hero img.active{opacity:1}
+.heroText{position:absolute;bottom:40px;left:40px;color:white}
+.heroText h1{font-size:48px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px}
+.card{background:rgba(255,255,255,.7);border-radius:22px;overflow:hidden;box-shadow:0 15px 30px rgba(0,0,0,.08);transition:.35s}
+.card img{width:100%;height:190px;object-fit:cover}
+.card h3{padding:18px;font-size:20px}
+.card:hover{transform:translateY(-12px) scale(1.03);box-shadow:0 30px 60px rgba(0,0,0,.15)}
+.pkg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.pkgCard{background:white;border-radius:22px;padding:26px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.3s}
+.pkgCard:hover{transform:scale(1.05)}
+.price{font-size:36px;font-weight:700;color:#4f46e5;margin:10px}
+table{width:100%;border-collapse:collapse;background:white;border-radius:16px;overflow:hidden}
+th,td{padding:16px;border:1px solid #e2e8f0;text-align:center}
+th{background:#4f46e5;color:white}
+.gallery{columns:3 220px;column-gap:14px}
+.gallery img{width:100%;margin:0 0 14px;border-radius:16px}
+form{background:white;padding:30px;border-radius:24px;display:grid;gap:14px;max-width:560px;box-shadow:0 10px 40px rgba(0,0,0,.08)}
+input,select,textarea{padding:12px;border-radius:10px;border:1px solid #cbd5e1}
+button{padding:14px;border:none;border-radius:12px;background:#4f46e5;color:white;font-weight:700;cursor:pointer}
+.success{color:green;font-weight:600;margin-top:10px}
+footer{text-align:center;padding:30px;background:#0f172a;color:white;margin-top:60px}
+</style>
+</head>
+<body>
+<header>
+<h2>✈ Dream Travel</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#dest">Destinations</a>
+<a href="#pkg">Packages</a>
+<a href="#gallery">Gallery</a>
+<a href="#book">Booking</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section>
+<div class="hero">
+<img class="active" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=1600&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1600&auto=format&fit=crop">
+<div class="heroText"><h1>Discover Your Next Adventure</h1></div>
+</div>
+</section>
+
+<section id="dest">
+<h2>Top Destinations</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=1200&auto=format&fit=crop"><h3>Paris</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1200&auto=format&fit=crop"><h3>Bali</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=1200&auto=format&fit=crop"><h3>Maldives</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1200&auto=format&fit=crop"><h3>Switzerland</h3></div>
+</div>
+</section>
+
+<section id="pkg">
+<h2>Packages</h2>
+<div class="pkg">
+<div class="pkgCard"><h3>Basic</h3><div class="price">$499</div><p>3★ Hotel<br>Breakfast<br>City Tour</p></div>
+<div class="pkgCard"><h3>Standard</h3><div class="price">$899</div><p>4★ Hotel<br>Half Board<br>Guided Trips</p></div>
+<div class="pkgCard"><h3>Premium</h3><div class="price">$1499</div><p>5★ Resort<br>All Meals<br>Private Guide</p></div>
+</div>
+<br><br>
+<table>
+<tr><th>Feature</th><th>Basic</th><th>Standard</th><th>Premium</th></tr>
+<tr><td>Hotel</td><td>3★</td><td>4★</td><td>5★</td></tr>
+<tr><td>Meals</td><td>Breakfast</td><td>Half</td><td>All</td></tr>
+<tr><td>Airport Pickup</td><td>✗</td><td>✓</td><td>✓</td></tr>
+</table>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1501556424050-d4816356f0b1?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop">
+</div>
+</section>
+
+<section id="book">
+<h2>Book Now</h2>
+<form id="f">
+<input required placeholder="Full Name">
+<input type="email" required placeholder="Email">
+<input type="date" id="d" required>
+<select required><option value="">Select Package</option><option>Basic</option><option>Standard</option><option>Premium</option></select>
+<textarea placeholder="Special Requests"></textarea>
+<button>Confirm Booking</button>
+<div id="ok" class="success"></div>
+</form>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Email: info@dreamtravel.com</p>
+<p>Phone: +91 98765 43210</p>
+<p>Chennai, India</p>
+</section>
+
+<footer>© 2026 Dream Travel Agency</footer>
+
+<script>
+const imgs=document.querySelectorAll('.hero img');
+let x=0;setInterval(()=>{imgs[x].classList.remove('active');x=(x+1)%imgs.length;imgs[x].classList.add('active')},3500);
+
+document.getElementById('f').onsubmit=e=>{
+ e.preventDefault();
+ let v=new Date(document.getElementById('d').value);
+ let t=new Date();t.setHours(0,0,0,0);
+ if(v<t){alert('Select future date');return}
+ document.getElementById('ok').innerText='✅ Booking Confirmed — We will contact you soon!';
+ e.target.reset();
+}
+</script>
+</body>
+</html>
